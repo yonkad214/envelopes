@@ -5,8 +5,14 @@ class Envelope():
 
     def init(self):
         rnd = random.randint(0,1000)
-        self._amount = rnd
+        self._used = False
+        self._money = rnd
 
     @property
-    def amount(self):
-        return self._amount
+    def money(self):
+        self._used = True
+        return self._money
+
+    @property
+    def used(self):
+        return self._used
