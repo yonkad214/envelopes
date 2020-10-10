@@ -1,4 +1,5 @@
 from envelope import Envelope
+import random
 
 class BaseStrategy():
 
@@ -16,6 +17,15 @@ class BaseStrategy():
             if i == 100:
                 return self._envelopes[i]
 
+class Automatic_BaseStrategy(BaseStrategy):
+    def __init__(self, envelopes):   
+        BaseStrategy.__init__(self,envelopes)  
+        self._precent = precent
+
+    def play(self):
+        rnd = random.randint(0,99)    
+        return self._envelopes[rnd]
+    
 
         
 
