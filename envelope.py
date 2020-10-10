@@ -1,12 +1,15 @@
-import random
+from random import randint
 
 
 class Envelope():
 
-    def init(self):
-        rnd = random.randint(0,1000)
+    def __init__(self):
+        rnd = randint(0,1000)
         self._used = False
         self._money = rnd
+
+    def __str__(self):
+        return "Money: " + str(self._money)
 
     @property
     def money(self):
