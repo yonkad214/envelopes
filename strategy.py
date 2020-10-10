@@ -20,7 +20,6 @@ class BaseStrategy():
 class Automatic_BaseStrategy(BaseStrategy):
     def __init__(self, envelopes):   
         BaseStrategy.__init__(self,envelopes)  
-        self._precent = precent
 
     def play(self):
         rnd = random.randint(0,99)    
